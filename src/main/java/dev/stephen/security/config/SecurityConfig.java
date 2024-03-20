@@ -17,7 +17,6 @@ public class SecurityConfig {
                     auth.requestMatchers("/home").permitAll();
                     auth.anyRequest().authenticated();
                 })
-                .formLogin(Customizer.withDefaults())
                 .oauth2Login(Customizer.withDefaults())
                 .build();
     }
